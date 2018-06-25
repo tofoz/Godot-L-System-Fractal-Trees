@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Tree/branch.gd" type="Script" id=1]
+
+
+[node name="branch" type="Spatial" index="0"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="RayCast" type="RayCast" parent="." index="0"]
+
+enabled = false
+exclude_parent = true
+cast_to = Vector3( 0, -1, 0 )
+collision_mask = 1
+
+[node name="end" type="Spatial" parent="." index="1"]
+
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+_sections_unfolded = [ "Transform" ]
+
+
